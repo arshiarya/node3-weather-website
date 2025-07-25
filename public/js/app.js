@@ -1,4 +1,3 @@
-console.log('client side code running');
 // Fetch API example to get weather data
 
 const weatherForm = document.querySelector('form')
