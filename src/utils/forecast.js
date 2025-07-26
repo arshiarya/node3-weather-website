@@ -7,9 +7,10 @@ const forecast = (latitude,longitude,callback) => {
         }else if(body.error){
             callback('Unable to find location. Try another search.', undefined);
         } else {
+            console.log(body.current.data)
             const actual_temp = body.current.temperature; 
             const feels_like_temp = body.current.feelslike;
-            callback(undefined, body.current.weather_descriptions[0] + " it is currently " + actual_temp + " degrees out." + " It feels like " + feels_like_temp + " degrees out.");
+            callback(undefined,"Weather is " + body.current.weather_descriptions[0] + ". It is currently " + actual_temp + " degrees out." + " It feels like " + feels_like_temp + " degrees out."+ "Humidity is "+ body.current.humidity + " % ."+" The wind speed is " + body.current.wind_speed + " mph.");
         }
     })
 }
