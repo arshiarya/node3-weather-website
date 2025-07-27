@@ -1,7 +1,7 @@
 const request = require('request');
 
 const geocode = (address, callback) => {
-    const url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(address) + '&format=json&limit=1';
+    const url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(address) + '&format=json&limit=1'+'&accept-language=en';
     request({
         url, json: true, headers: {
             'User-Agent': 'my-weather-app (arshiarya2006@gmail.com)' // Replace with your email
